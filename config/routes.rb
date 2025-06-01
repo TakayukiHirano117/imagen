@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get "images", to: "images#index"
+  get "images/new", to: "images#new"
+  post "images", to: "images#create"
+  get "images/:id", to: "images#show"
+  delete "images/:id", to: "images#delete"
   
   get '/posts', to: 'posts#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
