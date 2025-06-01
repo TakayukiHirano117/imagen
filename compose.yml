@@ -1,0 +1,11 @@
+services:
+  web:
+    build: .
+    image: rails8-dev
+    container_name: rails8-web
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    stdin_open: true
+    tty: true
