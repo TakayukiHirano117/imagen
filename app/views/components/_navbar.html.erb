@@ -1,14 +1,14 @@
 <nav class="border-gray-200 mt-2">
   <div class="flex justify-between items-center mx-auto">
     <div class="">
-      <%= image_tag "imagen-logo.png", class: "w-20 h-20 rounded-md" %>
+      <%= link_to image_tag("imagen-logo.png", class: "w-20 h-20 rounded-md"), "/images" %>
     </div>
 
     <div class="flex items-center gap-4">
-      <div class="text-[#3182ce]">Imagenについて</div>
+      <%= link_to "Imagenについて", "/about", class: "text-[#3182ce]" %>
       <!-- TODO: ログインとサインアップはユーザーがログインしているかどうかで表示を変える -->
-      <div class="text-[#3182ce]">ログイン</div>
-      <div class="text-[#3182ce]">サインアップ</div>
+      <%= link_to "ログイン", "/users/sign_in", class: "text-[#3182ce]" %>
+      <%= link_to "サインアップ", "/users/sign_up", class: "text-[#3182ce]" %>
     </div>
 
   </div> 

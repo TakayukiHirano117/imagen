@@ -1,4 +1,12 @@
-<div>
-  <h1 class="font-bold text-4xl">Images#index</h1>
-  <p>Find me in app/views/images/index.html.erb</p>
+<div class="mt-8">
+  <div class="text-4xl font-light">Images</div>
+  <div class="mt-8">
+    <div class="grid grid-cols-2 gap-4">
+      <% 20.times do %>
+        <div>
+          <%= link_to image_tag("dummy.png", class: "w-full h-auto"), "/images/1" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
