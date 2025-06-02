@@ -5,10 +5,10 @@ class ImagesController < ApplicationController
   def show
   end
 
-  def create
+  def new
   end
 
-  def new
+  def create
   end
 
   def delete
