@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "static_pages/about"
   devise_for :users
   get "/images", to: "images#index"
   get "images/new", to: "images#new"
@@ -19,4 +20,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get "/about", to: "static_pages#about"
 end
