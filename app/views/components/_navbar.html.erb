@@ -7,8 +7,13 @@
     <div class="flex items-center gap-4">
       <%= link_to "Imagenについて", "/about", class: "text-[#3182ce]" %>
       <!-- TODO: ログインとサインアップはユーザーがログインしているかどうかで表示を変える -->
-      <%= link_to "ログイン", "/users/sign_in", class: "text-[#3182ce]" %>
-      <%= link_to "サインアップ", "/users/sign_up", class: "text-[#3182ce]" %>
+      <% if user_signed_in? %>
+        <%= link_to "画像を作成", "/images/new", class: "text-[#3182ce]" %>
+        <%= button_to "ログアウト", destroy_user_session_path, method: :delete, class: "text-[#3182ce]" %>
+      <% else %>
+        <%= link_to "ログイン", new_user_session_path, class: "text-[#3182ce]" %>
+        <%= link_to "サインアップ", new_user_registration_path, class: "text-[#3182ce]" %>
+      <% end %>
     </div>
 
   </div> 
