@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get "static_pages/about"
   devise_for :users
   get "/images", to: "images#index"
-  get "images/new", to: "images#new"
+  get "/images/new", to: "images#new"
   post "images", to: "images#create"
   get "images/:id", to: "images#show"
   delete "images/:id", to: "images#delete"
