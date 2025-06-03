@@ -9,6 +9,8 @@ class ImagesController < ApplicationController
   def show
   end
 
+  # TODO: Modelにビジネスロジックを切り出す。
+  # TODO: generate 
   def new
     base_url = "https://api.openai.com/v1/images/generations"
     api_key = ENV["OPENAI_API_KEY"]
